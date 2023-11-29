@@ -7,8 +7,9 @@ const teamLeadRoutes = require('./routes/teamLeadRoutes');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Allow requests from any origin (less secure)
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: '*',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 }));
